@@ -12,6 +12,7 @@
 
 	<modules>
 		<module>dependencies</module>
+		<module>spring-boot/spring-boot-starter-actuator-ext</module>
 	</modules>
 
 	<properties>
@@ -21,7 +22,20 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<revision>0.0.1</revision>
 		<flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
+		<spring-boot.version>3.2.0</spring-boot.version>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
