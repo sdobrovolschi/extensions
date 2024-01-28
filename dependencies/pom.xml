@@ -25,6 +25,11 @@
                 <artifactId>spring-boot-starter-actuator-ext</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>spring-cloud-starter-openfeign-ext</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
