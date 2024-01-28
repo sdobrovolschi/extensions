@@ -1,0 +1,8 @@
+logging:
+  level:
+    feign:
+      Logger: info
+    root: off
+spring:
+  main:
+    banner-mode: off

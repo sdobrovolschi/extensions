@@ -17,6 +17,11 @@
         <dependencies>
             <dependency>
                 <groupId>com.example</groupId>
+                <artifactId>feign-ext</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.example</groupId>
                 <artifactId>spring-boot-starter-actuator-ext</artifactId>
                 <version>${project.version}</version>
             </dependency>
