@@ -1,6 +1,9 @@
 package org.spring.cloud.openfeign;
 
 import feign.Feign;
+import feign.micrometer.FeignTargetObservationConvention;
+import feign.micrometer.MicrometerObservationCapability;
+import io.micrometer.observation.ObservationRegistry;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.cloud.openfeign.FeignAutoConfiguration;
@@ -14,5 +17,10 @@ public class FeignAutoConfig {
     @Bean
     FeignLoggerFactory feignLoggerFactory() {
         return new SLF4JLoggerFactory();
+    }
+
+    @Bean
+    MicrometerObservationCapability micrometerObservationCapability(ObservationRegistry registry) {
+        return new MicrometerObservationCapability(registry, new FeignTargetObservationConvention());
     }
 }
