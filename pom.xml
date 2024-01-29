@@ -13,6 +13,7 @@
 	<modules>
 		<module>dependencies</module>
 		<module>feign-ext</module>
+		<module>micrometer-ext</module>
 		<module>spring-boot/spring-boot-starter-actuator-ext</module>
 		<module>spring-cloud/spring-cloud-starter-openfeign-ext</module>
 	</modules>
