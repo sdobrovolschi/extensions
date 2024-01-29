@@ -1,1 +1,2 @@
 org.spring.boot.actuate.autoconfigure.metrics.health.HealthMetricsAutoConfig
+org.spring.boot.actuate.autoconfigure.observation.ObservationAutoConfig
