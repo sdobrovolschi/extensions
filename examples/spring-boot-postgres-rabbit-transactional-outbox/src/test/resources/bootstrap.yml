@@ -1,0 +1,15 @@
+embedded:
+  rabbitmq:
+    docker-image: rabbitmq:3.11.10-management-alpine
+    files-to-include:
+      - classpath-resource: /rabbitmq.conf
+        container-path: /
+      - classpath-resource: /definitions.json
+        container-path: /
+    env:
+      RABBITMQ_CONFIG_FILE: /rabbitmq.conf
+    vhost: virtual-host
+    user: admin
+    password: rabbitmq
+  postgresql:
+    init-script-path: schema.sql

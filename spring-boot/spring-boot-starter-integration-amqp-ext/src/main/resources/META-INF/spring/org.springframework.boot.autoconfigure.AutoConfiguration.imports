@@ -1,0 +1,1 @@
+org.spring.boot.integration.autoconfigure.amqp.AmqpTransactionalOutboxAutoConfig

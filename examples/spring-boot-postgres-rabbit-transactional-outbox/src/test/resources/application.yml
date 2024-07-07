@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://${embedded.postgresql.host}:${embedded.postgresql.port}/${embedded.postgresql.schema}"
+    username: ${embedded.postgresql.user}
+    password: ${embedded.postgresql.password}
+  rabbitmq:
+    addresses: ${embedded.rabbitmq.host}:${embedded.rabbitmq.port}
+    address-shuffle-mode: random
+    virtual-host: ${embedded.rabbitmq.vhost}
+    username: ${embedded.rabbitmq.user}
+    password: ${embedded.rabbitmq.password}
+logging:
+  level:
+    org:
+      springframework:
+        jdbc: debug
+        amqp: debug
